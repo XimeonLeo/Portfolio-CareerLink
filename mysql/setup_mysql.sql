@@ -1,0 +1,11 @@
+-- Prepares MySQL Database and ×××-User for the Project
+
+DATABASE_NAME="database_name"
+ADMIN_USER="username"
+ADMIN_PASSWORD="password"
+
+CREATE DATABASE $DATABASE_NAME;
+CREATE USER '$ADMIN_USER'@'localhost' IDENTIFIED BY '$ADMIN_PASSWORD';
+GRANT ALL PRIVILEGES ON $DATABASE_NAME.* TO '$ADMIN_USER'@'localhost';
+FLUSH PRIVILEGES;
+
